@@ -1,0 +1,143 @@
+{% extends 'store/layouts/main.html' %}
+
+{% block content %}
+{% load static %}
+{% include 'store/inc/slider.html' %}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-2">
+            <h1>Our Specialised Amulets and Talisman</h1>
+            <hr>
+            <div class="row">
+                {% for item in category %}
+                <div class="col-md-3 shadow mt-2 border rounded">
+                    <div class="card border-0">
+                        <a href="{% url 'collectionsview' item.slug %}" <div class="card-body">
+                            <div class="category-image">
+                                <img src="{{item.image.url}}" alt="category image"
+                                    class="img-fluid rounded-circle mx-auto d-block w-50" />
+                            </div>
+                            <h4 class="text-center mt-4">{{item.name}}</h4>
+                    </div>
+                    </a>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <hr>
+    <h1 class="text-center"><i> What our happy customer say about</i></h1>
+    <div class="row">
+        <div class="col">
+            <div class="container text-center">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active border-0">
+                            <!-- Crousal Item -->
+                            <div class="card mb-3 border-0" style="border: none;">
+                                <div class="row g-0 border-0" style="display: flex; align-items: center;">
+                                    <div class="col-md-2">
+                                        <img src="{% static 'images/pass.jpg' %}" class="img-fluid rounded-circle mt-3"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to additional content. This content is a little bit
+                                                longer. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                                                quae nihil nemo et sequi eius? Unde labore architecto ipsam magnam
+                                                laudantium consectetur harum nostrum saepe delectus ullam voluptatum
+                                                corporis enim quia autem, repellendus, reprehenderit id minima animi
+                                                nam! Porro voluptates, assumenda dignissimos voluptatem obcaecati et
+                                                alias minus aspernatur tenetur, tempore quia labore. Magni in tempore
+                                                natus quo voluptatibus dolor beatae itaque esse. Ut voluptate eum id
+                                                obcaecati ullam earum numquam.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <!-- Crousal Item -->
+                            <div class="card mb-3" style="border: none;">
+                                <div class="row g-0" style="display: flex; align-items: center;">
+                                    <div class="col-md-2">
+                                        <img src="{% static 'images/pass1.jpg' %}" class="img-fluid rounded-circle mt-3"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to additional content. This content is a little bit
+                                                longer. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                                                quae nihil nemo et sequi eius? Unde labore architecto ipsam magnam
+                                                laudantium consectetur harum nostrum saepe delectus ullam voluptatum
+                                                corporis enim quia autem, repellendus, reprehenderit id minima animi
+                                                nam! Porro voluptates, assumenda dignissimos voluptatem obcaecati et
+                                                alias minus aspernatur tenetur, tempore quia labore. Magni in tempore
+                                                natus quo voluptatibus dolor beatae itaque esse. Ut voluptate eum id
+                                                obcaecati ullam earum numquam.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <!-- Crousal Item -->
+                            <div class="card mb-3" style="border: none;">
+                                <div class="row g-0" style="display: flex; align-items: center;">
+                                    <div class="col-md-2">
+                                        <img src="{% static 'images/pass2.jpg' %}" class="img-fluid rounded-circle mt-3"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to additional content. This content is a little bit
+                                                longer. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                                                quae nihil nemo et sequi eius? Unde labore architecto ipsam magnam
+                                                laudantium consectetur harum nostrum saepe delectus ullam voluptatum
+                                                corporis enim quia autem, repellendus, reprehenderit id minima animi
+                                                nam! Porro voluptates, assumenda dignissimos voluptatem obcaecati et
+                                                alias minus aspernatur tenetur, tempore quia labore. Magni in tempore
+                                                natus quo voluptatibus dolor beatae itaque esse. Ut voluptate eum id
+                                                obcaecati ullam earum numquam.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Tona Totka, Inc</p>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img src="{% static 'images/boot.png' %}" width="40" height="32"></img>
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+    </footer>
+  </div>
+{% endblock content %}
