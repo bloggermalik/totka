@@ -27,7 +27,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.131.122.22']
 
 
 
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'totka',
-        'USER': 'postgres',
+        'NAME': 'mydb',
+        'USER': 'admin',
         'PASSWORD': 'admin',
-        'PORT': '5432',
+        'PORT': '',
         'HOST': 'localhost',
 
     }
@@ -148,4 +148,4 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 import os
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
