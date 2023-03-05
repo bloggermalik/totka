@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-=+7)615k9aisi6n)nx4at6_0f-r%+us^fa5wzn)#mzpxp4vg$7
 DEBUG = True
 
 
+
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
@@ -77,10 +78,21 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'totka',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'PORT': '5432',
+        'HOST': 'localhost',
+
     }
 }
 
