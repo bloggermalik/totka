@@ -27,7 +27,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['34.131.122.22']
+ALLOWED_HOSTS = ['35.184.243.174']
 
 
 
@@ -90,12 +90,22 @@ DATABASES = {
         'NAME': 'mydb',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'PORT': '',
+        'PORT': '5432',
         'HOST': 'localhost',
 
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'totka',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'PORT': '5432',
+#         'HOST': 'localhost',
 
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
